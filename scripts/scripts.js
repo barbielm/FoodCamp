@@ -17,29 +17,8 @@ let telefone = "5585985633070"
 let nome 
 let endereco
 
-function habilitar_pedido(){
-    const habilitar = document.querySelector(".inferior .fechar_pedido")
-    if(n_pratos>0 && n_bebidas>0 && n_sobremesas>0){
-        valor_total = valor_prato + valor_bebida + valor_sobremesa
-        valor_total = valor_total.toFixed(2)
 
-        habilitar.classList.add("verde")
-        const link = document.getElementById("link")
-        const paragrafo = document.getElementById("paragrafo")
-        link.classList.remove("oculto")
-        paragrafo.classList.add("oculto")
 
-        
-        message += "Olá, gostaria de fazer o pedido:\n" + "- Prato: " + nome_prato + "\n"
-        message += "- Bebida: " + nome_bebida + "\n"
-        message += "- Sobremesa: " + nome_sobremesa + "\n" 
-        message += "Total: R$ " + valor_total
-        mesage += "\n\n\n" + "nome: " + "\n" + "Endereço: " + endereco
-        message = encodeURI(message)
-    
-        link.href = "https://wa.me/" + telefone + "?text=" + message
-    }    
-}
 
 
 function marcar_opcao(id, classe){
@@ -84,8 +63,33 @@ function marcar_opcao(id, classe){
 
 }
 
+
+function habilitar_pedido(){
+    const habilitar = document.querySelector(".inferior .fechar_pedido")
+    if(n_pratos>0 && n_bebidas>0 && n_sobremesas>0){
+        valor_total = valor_prato + valor_bebida + valor_sobremesa
+        valor_total = valor_total.toFixed(2)
+
+        habilitar.classList.add("verde")
+        let link = document.getElementById("texto-botao")
+        link.innerText = "Fechar pedido"
+
+        message += "Olá, gostaria de fazer o pedido:\n" + "- Prato: " + nome_prato + "\n"
+        message += "- Bebida: " + nome_bebida + "\n"
+        message += "- Sobremesa: " + nome_sobremesa + "\n" 
+        message += "Total: R$ " + valor_total
+        message = encodeURIComponent(message)
+        message = "https://wa.me/" + telefone + "?text=" + message
+
+    }    
+}
+
+
+
 function solicitacao(){
     nome = prompt("Digite o seu nome: ")
     endereco = prompt("Digite o seu endereço: ")
+    message = message + encodeURIComponent("\n\n\n" + "Nome: " + nome + "\n" +"Endereço: " + endereco)
+    location.replace(message)
 }
 
