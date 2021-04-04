@@ -144,17 +144,18 @@ li .preco{
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     line-height: 26px;
-    padding: 0 15px;
+    padding: 15px 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 .confirmar-pedido p{
-    font-weight: bold;
+    font-weight: 700;
 }
 .confirmar-pedido .item{
     width: 100%;
+    font-weight: 400;
     display: flex;
     justify-content: space-between;
 }
@@ -163,7 +164,7 @@ li .preco{
     height: 54px;
     background: #FFFFFF;
     color: #50D074;
-    font-weight: bold;
+    font-weight: 700;
     border-radius: 100px;
     display: flex;
     align-items: center;
@@ -175,7 +176,7 @@ li .preco{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 20px;
     line-height: 23px;
 }

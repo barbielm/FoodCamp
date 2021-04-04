@@ -17,8 +17,9 @@
             <div class="subtitulo">Sua comida em 6 minutos</div>
         </div>
         <div class="inferior">
-            <div class="fechar_pedido" onclick="solicitacao()">
-                <p id="texto-botao">Selecione os 3 itens para fechar o pedido</p>
+            <div class="fechar_pedido" >
+                <p id="desabilitado">Selecione os 3 itens para fechar o pedido</p>
+                <p id="habilitado" class="oculto" onclick="confirmar()">Fechar pedido</p>
             </div>
         </div>
         <div class="cardapio " id="first">
@@ -102,12 +103,12 @@
     </div>    
     <div class="confirmar-pedido oculto" >
         <p >Confirme seu pedido</p>
-        <div class="item"><span>Frango Yin Yang</span> <span>14,90</span></div>
-        <div class="item"><span>Coquinha gelada</span> <span>4,90</span></div>
-        <div class="item"><span>Pudim</span> <span>7,90</span></div>
-        <div class="item" style="font-weight: bold;"><span>TOTAL</span><span>R$ 27,70</span></div>
-        <div class="pedir">Tudo certo, pode pedir!</div>
-        <div class="cancelar">Cancelar</div>
+        <div class="item"><span id="nome_prato">Frango Yin Yang</span> <span id="valor_prato">14,90</span></div>
+        <div class="item"><span id="nome_bebida">Coquinha gelada</span> <span id="valor_bebida">4,90</span></div>
+        <div class="item"><span id="nome_sobremesa">Pudim</span> <span id="valor_sobremesa">7,90</span></div>
+        <div class="item" style="font-weight: bold;"><span>TOTAL</span><span id="valor_total">R$ 27,70</span></div>
+        <div class="pedir" onclick="solicitar()">Tudo certo, pode pedir!</div>
+        <div class="cancelar" onclick="recarregar()">Cancelar</div>
     </div>    
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <script src="scripts/scripts.js"></script>
