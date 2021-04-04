@@ -24,78 +24,78 @@
         <div class="cardapio " id="first">
             <p>Primeiro, seu prato</p>
             <ul class="pratos">
-                    <li class="prato">
+                    <li class="prato" id="prato1" onclick="marcar_opcao('prato1','prato')">
                         <img src="imagens/frango_yin_yang 1.png"/>
                         <div class="nome">Frango Yin Yang</div>
                         <div class="descricao">Um pouco de batata, um pouco de salada</div>
                         <div class="preco">R$ 14,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
-                    <li class="prato">
+                    <li class="prato" id="prato2" onclick="marcar_opcao('prato2','prato')">
                         <img src="imagens/frango_yin_yang 1.png"/>
                         <div class="nome">Frango Yin Yang</div>
                         <div class="descricao">Um pouco de batata, um pouco de salada</div>
                         <div class="preco">R$ 14,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
-                    <li class="prato">
+                    <li class="prato" id="prato3" onclick="marcar_opcao('prato3','prato')">
                         <img src="imagens/frango_yin_yang 1.png"/>
                         <div class="nome">Frango Yin Yang</div>
                         <div class="descricao">Um pouco de batata, um pouco de salada</div>
                         <div class="preco">R$ 14,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
             </ul>
         </div>
         <div class="cardapio ">
             <p>Agora, sua bebida</p>
-            <ul class="bebidas">
-                    <li class="bebida">
+            <ul class="bebidas" >
+                    <li class="bebida" id="bebida1" onclick="marcar_opcao('bebida1','bebida')">
                         <img src="imagens/coquinha_gelada 1.png"/>
                         <div class="nome">Coquinha gelada</div>
                         <div class="descricao">Lata 350ml</div>
                         <div class="preco">R$ 4,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
-                    <li class="bebida">
+                    <li class="bebida" id="bebida2" onclick="marcar_opcao('bebida2','bebida')">
                         <img src="imagens/coquinha_gelada 1.png"/>
                         <div class="nome">Coquinha gelada</div>
                         <div class="descricao">Lata 350ml</div>
                         <div class="preco">R$ 4,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
-                    <li class="bebida">
+                    <li class="bebida" id="bebida3" onclick="marcar_opcao('bebida3','bebida')">
                         <img src="imagens/coquinha_gelada 1.png"/>
                         <div class="nome">Coquinha gelada</div>
                         <div class="descricao">Lata 350ml</div>
                         <div class="preco">R$ 4,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
             </ul>
         </div>
         <div class="cardapio" id="last">
             <p>Por fim, sua sobremesa</p>
             <ul class="sobremesas">
-                    <li class="sobremesa">
+                    <li class="sobremesa" id="sobremesa1" onclick="marcar_opcao('sobremesa1','sobremesa')">
                         <img src="imagens/pudim 2.png"/>
                         <div class="nome">Pudim</div>
                         <div class="descricao">Apenas Pudim</div>
                         <div class="preco">R$ 7,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
-                    <li class="sobremesa ">
+                    <li class="sobremesa " id="sobremesa2" onclick="marcar_opcao('sobremesa2','sobremesa')">
                         <img src="imagens/pudim 2.png"/>
                         <div class="nome">Pudim</div>
                         <div class="descricao">Apenas Pudim</div>
                         <div class="preco">R$ 7,90</div>
-                        <ion-icon name="checkmark-circle" class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle" class="ion-icon oculto"></ion-icon>
                     </li>
-                    <li class="sobremesa " >
+                    <li class="sobremesa " id="sobremesa3" onclick="marcar_opcao('sobremesa3','sobremesa')">
                         <img src="imagens/pudim 2.png"/>
                         <div class="nome">Pudim</div>
                         <div class="descricao">Apenas Pudim</div>
                         <div class="preco">R$ 7,90</div>
-                        <ion-icon name="checkmark-circle"  class="oculto"></ion-icon>
+                        <ion-icon name="checkmark-circle"  class="ion-icon oculto"></ion-icon>
                     </li>
             </ul>
         </div>
@@ -110,5 +110,6 @@
         <div class="cancelar">Cancelar</div>
     </div>    
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="scripts/scripts.js"></script>
 </body>
 </html>
