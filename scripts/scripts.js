@@ -65,23 +65,12 @@ function marcar_opcao(id, classe){
 
 
 function habilitar_pedido(){
-    const habilitar = document.querySelector(".inferior .fechar_pedido")
     if(n_pratos>0 && n_bebidas>0 && n_sobremesas>0){
-        valor_total = valor_prato + valor_bebida + valor_sobremesa
-        valor_total = valor_total.toFixed(2)
-
-        habilitar.classList.add("verde")
+        
         let desabilitado = document.getElementById("desabilitado")
         let habilitado = document.getElementById("habilitado")
         desabilitado.classList.add("oculto")
         habilitado.classList.remove("oculto")
-
-        message += "Olá, gostaria de fazer o pedido:\n" + "- Prato: " + nome_prato + "\n"
-        message += "- Bebida: " + nome_bebida + "\n"
-        message += "- Sobremesa: " + nome_sobremesa + "\n" 
-        message += "Total: R$ " + valor_total
-        message = encodeURIComponent(message)
-        message = "https://wa.me/" + telefone + "?text=" + message
 
     }    
 }
@@ -92,6 +81,9 @@ function confirmar(){
     confirma.classList.remove("oculto")
     conteudo.classList.add("borrado")
 
+    valor_total = valor_prato + valor_bebida + valor_sobremesa
+    valor_total = valor_total.toFixed(2)
+
     document.getElementById("nome_prato").innerText = nome_prato
     document.getElementById("nome_bebida").innerText = nome_bebida
     document.getElementById("nome_sobremesa").innerText = nome_sobremesa
@@ -99,14 +91,22 @@ function confirmar(){
     document.getElementById("valor_prato").innerText = valor_prato.toFixed(2).replace(".",",")
     document.getElementById("valor_bebida").innerText = valor_bebida.toFixed(2).replace(".",",")
     document.getElementById("valor_sobremesa").innerText = valor_sobremesa.toFixed(2).replace(".",",")
+    document.getElementById("valor_total").innerText = "R$ " + valor_total.replace(".",",")
 
 }
 
 function solicitar(){
     nome = prompt("Digite o seu nome: ")
     endereco = prompt("Digite o seu endereço: ")
-    message = message + encodeURIComponent("\n\n\n" + "Nome: " + nome + "\n" +"Endereço: " + endereco)
-    location.replace(message)
+    message = message + "Olá, gostaria de fazer o pedido:" + "\n" + "- Prato: " + nome_prato + "\n"
+    message = message + "- Bebida: " + nome_bebida + "\n"
+    message = message + "- Sobremesa: " + nome_sobremesa + "\n" 
+    message = message + "Total: R$ " + valor_total
+    let link = encodeURIComponent(message)
+    link = "https://wa.me/" + telefone + "?text=" + link
+    link = link + encodeURIComponent("\n\n\n" + "Nome: " + nome + "\n" +"Endereço: " + endereco)
+    
+    location.replace(link)
 }
 
 function recarregar(){
@@ -114,6 +114,6 @@ function recarregar(){
     const conteudo = document.querySelector(".conteudo")
     confirma.classList.add("oculto")
     conteudo.classList.remove("borrado")
-    
+    message = ""
 }
 

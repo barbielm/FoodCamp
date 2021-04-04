@@ -54,6 +54,7 @@ font-family: 'Roboto', sans-serif;*/
     font-family: 'Roboto', sans-serif;
     font-weight: 400px;
     font-size: 20px;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,6 +98,9 @@ li{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
     border-radius: 9px;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 li ion-icon{
     position: absolute;
@@ -108,6 +112,7 @@ li ion-icon{
 }
 li img{
     width: 144px;
+    max-height: 100px;
     border-radius: 4px;
     margin-bottom: 5px;
 }
@@ -169,6 +174,7 @@ li .preco{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .confirmar-pedido .cancelar{
     width: 80%;
@@ -179,6 +185,7 @@ li .preco{
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
+    cursor: pointer;
 }
 .borrado{
     opacity: 0.2;
